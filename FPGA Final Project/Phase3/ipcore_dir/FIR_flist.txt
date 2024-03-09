@@ -1,0 +1,16 @@
+# Output products list for <FIR>
+FIR.asy
+FIR.gise
+FIR.mif
+FIR.ngc
+FIR.sym
+FIR.v
+FIR.veo
+FIR.xco
+FIR.xise
+FIRCOEFF_auto0_0.mif
+FIR_flist.txt
+FIR_readme.txt
+FIR_xmdf.tcl
+FIRfilt_decode_rom.mif
+_xmsgs\pn_parser.xmsgs

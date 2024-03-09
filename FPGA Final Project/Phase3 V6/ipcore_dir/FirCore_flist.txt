@@ -1,0 +1,14 @@
+# Output products list for <FirCore>
+FirCore.asy
+FirCore.gise
+FirCore.mif
+FirCore.ngc
+FirCore.sym
+FirCore.v
+FirCore.veo
+FirCore.xco
+FirCore.xise
+FirCore_flist.txt
+FirCore_readme.txt
+FirCore_xmdf.tcl
+demo_tb\tb_FirCore.vhd

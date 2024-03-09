@@ -1,0 +1,14 @@
+INFO:sim:172 - Generating IP...
+Applying current project options...
+Finished applying current project options.
+Customizing IP...
+Qt: Untested Windows version 6.2 detected!
+Release 14.7 - Xilinx CORE Generator IP GUI Launcher P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+WARNING:coreutil - WARNING:sim:192 - Xco Parameter changed from
+   (Coefficient_File,E:/Documents/Darsi/FPGA/Project_3962/FIR_Coefficients.coe)
+      to
+   (Coefficient_File,E:\Documents\Darsi\FPGA\Project_3962\FIR_Coefficients.coe)
+      during Recustomization.
+Cancelled Customization.
+Wrote CGP file for project 'FirCore'.

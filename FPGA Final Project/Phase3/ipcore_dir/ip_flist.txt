@@ -1,0 +1,25 @@
+# Output products list for <ip>
+_xmsgs\pn_parser.xmsgs
+ip.asy
+ip.gise
+ip.mif
+ip.ngc
+ip.sym
+ip.v
+ip.veo
+ip.xco
+ip.xise
+ipCOEFF_auto0_0.mif
+ipCOEFF_auto0_1.mif
+ipCOEFF_auto0_2.mif
+ipCOEFF_auto0_3.mif
+ipCOEFF_auto0_4.mif
+ipCOEFF_auto0_5.mif
+ipCOEFF_auto0_6.mif
+ipCOEFF_auto0_7.mif
+ipCOEFF_auto0_8.mif
+ipCOEFF_auto0_9.mif
+ip_flist.txt
+ip_readme.txt
+ip_xmdf.tcl
+ipfilt_decode_rom.mif

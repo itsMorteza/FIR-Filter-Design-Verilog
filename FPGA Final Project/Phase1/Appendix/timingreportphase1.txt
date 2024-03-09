@@ -1,0 +1,1147 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: FIRFilterBasic.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FIRFilterBasic.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FIRFilterBasic"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : FIRFilterBasic
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\fpaga\firfilterbasic2\FIRFilterBasic.v" into library work
+Parsing module <FIRFilterBasic>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FIRFilterBasic>.
+WARNING:HDLCompiler:413 - "E:\fpaga\firfilterbasic2\FIRFilterBasic.v" Line 59: Result of 8-bit expression is truncated to fit in 7-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FIRFilterBasic>.
+    Related source file is "E:\fpaga\firfilterbasic2\FIRFilterBasic.v".
+    Found 7-bit register for signal <cnt>.
+    Found 304-bit register for signal <n0094[303:0]>.
+    Found 16-bit register for signal <out>.
+    Found 304-bit register for signal <n0093[303:0]>.
+    Found 7-bit adder for signal <cnt[6]_GND_1_o_add_23_OUT> created at line 59.
+    Found 33-bit adder for signal <n0187[32:0]> created at line 73.
+    Found 34-bit adder for signal <n0190[33:0]> created at line 73.
+    Found 35-bit adder for signal <n0193[34:0]> created at line 73.
+    Found 36-bit adder for signal <_n0239> created at line 73.
+    Found 36-bit adder for signal <_n0240> created at line 73.
+    Found 36-bit adder for signal <_n0241> created at line 73.
+    Found 36-bit adder for signal <_n0242> created at line 73.
+    Found 36-bit adder for signal <_n0243> created at line 73.
+    Found 36-bit adder for signal <_n0244> created at line 73.
+    Found 36-bit adder for signal <_n0245> created at line 73.
+    Found 36-bit adder for signal <_n0246> created at line 73.
+    Found 36-bit adder for signal <_n0247> created at line 73.
+    Found 36-bit adder for signal <_n0248> created at line 73.
+    Found 36-bit adder for signal <_n0249> created at line 73.
+    Found 36-bit adder for signal <_n0250> created at line 73.
+    Found 36-bit adder for signal <_n0251> created at line 73.
+    Found 36-bit adder for signal <_n0252> created at line 73.
+    Found 36-bit adder for signal <n0158> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[0][15]_shift[0][15]_MuLt_34_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[1][15]_shift[1][15]_MuLt_35_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[2][15]_shift[2][15]_MuLt_37_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[3][15]_shift[3][15]_MuLt_39_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[4][15]_shift[4][15]_MuLt_41_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[5][15]_shift[5][15]_MuLt_43_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[6][15]_shift[6][15]_MuLt_45_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[7][15]_shift[7][15]_MuLt_47_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[8][15]_shift[8][15]_MuLt_49_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[9][15]_shift[9][15]_MuLt_51_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[10][15]_shift[10][15]_MuLt_53_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[11][15]_shift[11][15]_MuLt_55_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[12][15]_shift[12][15]_MuLt_57_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[13][15]_shift[13][15]_MuLt_59_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[14][15]_shift[14][15]_MuLt_61_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[15][15]_shift[15][15]_MuLt_63_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[16][15]_shift[16][15]_MuLt_65_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[17][15]_shift[17][15]_MuLt_67_OUT> created at line 73.
+    Found 16x16-bit multiplier for signal <coef[18][15]_shift[18][15]_MuLt_69_OUT> created at line 73.
+    Found 7-bit comparator greater for signal <cnt[6]_GND_1_o_LessThan_2_o> created at line 57
+    Found 7-bit comparator greater for signal <n0001> created at line 58
+    Summary:
+	inferred  19 Multiplier(s).
+	inferred  19 Adder/Subtractor(s).
+	inferred 631 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  19 Multiplexer(s).
+Unit <FIRFilterBasic> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 19
+ 16x16-bit multiplier                                  : 19
+# Adders/Subtractors                                   : 19
+ 33-bit adder                                          : 1
+ 34-bit adder                                          : 1
+ 35-bit adder                                          : 1
+ 36-bit adder                                          : 15
+ 7-bit adder                                           : 1
+# Registers                                            : 4
+ 16-bit register                                       : 1
+ 304-bit register                                      : 2
+ 7-bit register                                        : 1
+# Comparators                                          : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 19
+ 16-bit 2-to-1 multiplexer                             : 19
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <coef_0_208> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_207> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_206> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_205> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_204> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_203> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_202> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_201> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_200> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_199> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_198> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_197> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_196> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_195> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_194> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_193> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_192> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_191> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_190> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_227> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_226> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_225> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_224> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_223> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_222> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_221> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_220> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_219> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_218> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_217> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_216> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_215> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_214> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_213> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_212> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_211> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_210> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_209> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_170> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_169> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_168> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_167> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_166> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_165> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_164> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_163> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_162> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_161> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_160> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_159> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_158> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_157> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_156> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_155> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_154> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_153> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_152> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_189> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_188> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_187> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_186> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_185> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_184> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_183> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_182> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_181> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_180> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_179> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_178> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_177> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_176> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_175> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_174> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_173> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_172> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_171> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_284> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_283> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_282> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_281> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_280> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_279> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_278> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_277> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_276> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_275> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_274> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_273> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_272> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_271> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_270> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_269> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_268> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_267> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_266> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_303> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_302> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_301> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_300> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_299> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_298> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_297> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_296> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_295> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_294> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_293> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_292> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_291> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_290> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_289> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_288> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_287> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_286> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_285> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_246> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_245> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_244> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_243> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_242> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_241> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_240> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_239> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_238> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_237> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_236> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_235> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_234> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_233> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_232> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_231> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_230> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_229> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_228> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_265> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_264> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_263> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_262> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_261> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_260> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_259> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_258> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_257> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_256> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_255> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_254> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_253> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_252> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_251> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_250> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_249> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_248> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_247> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_56> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_55> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_54> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_53> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_52> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_51> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_50> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_49> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_48> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_47> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_46> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_45> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_44> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_43> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_42> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_41> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_40> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_39> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_38> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_75> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_74> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_73> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_72> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_71> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_70> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_69> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_68> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_67> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_66> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_65> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_64> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_63> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_62> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_61> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_60> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_59> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_58> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_57> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_18> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_17> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_16> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_15> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_14> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_13> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_12> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_11> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_10> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_9> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_8> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_7> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_6> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_5> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_4> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_3> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_2> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_1> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_0> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_37> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_36> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_35> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_34> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_33> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_32> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_31> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_30> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_29> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_28> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_27> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_26> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_25> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_24> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_23> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_22> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_21> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_20> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_19> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_132> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_131> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_130> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_129> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_128> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_127> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_126> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_125> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_124> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_123> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_122> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_121> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_120> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_119> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_118> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_117> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_116> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_115> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_114> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_151> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_150> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_149> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_148> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_147> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_146> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_145> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_144> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_143> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_142> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_141> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_140> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_139> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_138> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_137> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_136> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_135> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_134> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_133> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_94> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_93> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_92> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_91> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_90> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_89> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_88> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_87> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_86> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_85> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_84> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_83> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_82> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_81> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_80> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_79> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_78> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_77> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_76> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_113> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_112> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_111> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_110> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_109> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_108> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_107> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_106> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_105> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_104> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_103> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_102> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_101> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_100> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_99> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_98> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_97> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_96> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_95> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <FIRFilterBasic>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+	The following adders/subtractors are grouped into adder tree <Madd_n01581> :
+ 	<Madd_n0187[32:0]> in block <FIRFilterBasic>, 	<Madd_n0190[33:0]> in block <FIRFilterBasic>, 	<Madd_n0193[34:0]> in block <FIRFilterBasic>, 	<Madd__n0240> in block <FIRFilterBasic>, 	<Madd__n0239> in block <FIRFilterBasic>, 	<Madd__n0241> in block <FIRFilterBasic>, 	<Madd__n0242> in block <FIRFilterBasic>, 	<Madd__n0245> in block <FIRFilterBasic>, 	<Madd__n0246> in block <FIRFilterBasic>, 	<Madd__n0248> in block <FIRFilterBasic>, 	<Madd__n0249> in block <FIRFilterBasic>.
+	The following adders/subtractors are grouped into adder tree <Madd__n02521> :
+ 	<Madd__n0244> in block <FIRFilterBasic>, 	<Madd__n0243> in block <FIRFilterBasic>, 	<Madd__n0247> in block <FIRFilterBasic>, 	<Madd__n0250> in block <FIRFilterBasic>.
+	Multiplier <Mmult_coef[17][15]_shift[17][15]_MuLt_67_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd17> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT>.
+	Multiplier <Mmult_coef[16][15]_shift[16][15]_MuLt_65_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd16> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT>.
+	Multiplier <Mmult_coef[15][15]_shift[15][15]_MuLt_63_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd15> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT>.
+	Multiplier <Mmult_coef[14][15]_shift[14][15]_MuLt_61_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd14> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT>.
+	Multiplier <Mmult_coef[13][15]_shift[13][15]_MuLt_59_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd13> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT>.
+	Multiplier <Mmult_coef[12][15]_shift[12][15]_MuLt_57_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd12> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT>.
+	Multiplier <Mmult_coef[11][15]_shift[11][15]_MuLt_55_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd11> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT>.
+	Multiplier <Mmult_coef[10][15]_shift[10][15]_MuLt_53_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd10> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT>.
+	Multiplier <Mmult_coef[9][15]_shift[9][15]_MuLt_51_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd9> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT>.
+	Multiplier <Mmult_coef[8][15]_shift[8][15]_MuLt_49_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd8> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT>.
+	Multiplier <Mmult_coef[7][15]_shift[7][15]_MuLt_47_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd7> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT>.
+	Multiplier <Mmult_coef[6][15]_shift[6][15]_MuLt_45_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd6> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT>.
+	Multiplier <Mmult_coef[5][15]_shift[5][15]_MuLt_43_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd5> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT>.
+	Multiplier <Mmult_coef[4][15]_shift[4][15]_MuLt_41_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd4> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT>.
+	Multiplier <Mmult_coef[18][15]_shift[18][15]_MuLt_69_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd3> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT>.
+	Multiplier <Mmult_coef[3][15]_shift[3][15]_MuLt_39_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd2> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT>.
+	Multiplier <Mmult_coef[2][15]_shift[2][15]_MuLt_37_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd1> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT>.
+	Multiplier <Mmult_coef[0][15]_shift[0][15]_MuLt_34_OUT> in block <FIRFilterBasic> and adder/subtractor <ADDER_FOR_MULTADD_Madd> in block <FIRFilterBasic> are combined into a MAC<Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT>.
+Unit <FIRFilterBasic> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# MACs                                                 : 18
+ 16x16-to-36-bit MAC                                   : 18
+# Multipliers                                          : 1
+ 16x16-bit multiplier                                  : 1
+# Counters                                             : 1
+ 7-bit up counter                                      : 1
+# Registers                                            : 624
+ Flip-Flops                                            : 624
+# Comparators                                          : 2
+ 7-bit comparator greater                              : 2
+# Multiplexers                                         : 34
+ 1-bit 2-to-1 multiplexer                              : 16
+ 16-bit 2-to-1 multiplexer                             : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <coef_0_208> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_207> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_206> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_205> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_204> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_203> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_202> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_201> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_200> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_199> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_198> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_197> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_196> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_195> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_194> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_193> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_192> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_191> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_190> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_227> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_226> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_225> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_224> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_223> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_222> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_221> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_220> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_219> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_218> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_217> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_216> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_215> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_214> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_213> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_212> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_211> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_210> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_209> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_170> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_169> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_168> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_167> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_166> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_165> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_164> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_163> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_162> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_161> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_160> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_159> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_158> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_157> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_156> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_155> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_154> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_153> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_152> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_189> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_188> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_187> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_186> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_185> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_184> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_183> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_182> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_181> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_180> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_179> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_178> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_177> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_176> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_175> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_174> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_173> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_172> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_171> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_284> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_283> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_282> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_281> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_280> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_279> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_278> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_277> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_276> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_275> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_274> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_273> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_272> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_271> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_270> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_269> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_268> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_267> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_266> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_303> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_302> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_301> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_300> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_299> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_298> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_297> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_296> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_295> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_294> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_293> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_292> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_291> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_290> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_289> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_288> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_287> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_286> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_285> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_246> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_245> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_244> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_243> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_242> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_241> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_240> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_239> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_238> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_237> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_236> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_235> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_234> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_233> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_232> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_231> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_230> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_229> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_228> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_265> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_264> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_263> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_262> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_261> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_260> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_259> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_258> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_257> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_256> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_255> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_254> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_253> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_252> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_251> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_250> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_249> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_248> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_247> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_56> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_55> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_54> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_53> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_52> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_51> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_50> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_49> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_48> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_47> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_46> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_45> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_44> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_43> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_42> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_41> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_40> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_39> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_38> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_75> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_74> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_73> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_72> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_71> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_70> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_69> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_68> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_67> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_66> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_65> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_64> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_63> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_62> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_61> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_60> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_59> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_58> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_57> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_18> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_17> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_16> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_15> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_14> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_13> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_12> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_11> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_10> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_9> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_8> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_7> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_6> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_5> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_4> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_3> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_2> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_1> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_0> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_37> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_36> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_35> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_34> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_33> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_32> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_31> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_30> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_29> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_28> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_27> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_26> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_25> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_24> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_23> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_22> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_21> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_20> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_19> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_132> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_131> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_130> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_129> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_128> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_127> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_126> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_125> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_124> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_123> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_122> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_121> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_120> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_119> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_118> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_117> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_116> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_115> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_114> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_151> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_150> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_149> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_148> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_147> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_146> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_145> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_144> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_143> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_142> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_141> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_140> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_139> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_138> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_137> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_136> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_135> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_134> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_133> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_94> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_93> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_92> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_91> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_90> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_89> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_88> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_87> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_86> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_85> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_84> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_83> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_82> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_81> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_80> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_79> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_78> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_77> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_76> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_113> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_112> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_111> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_110> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_109> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_108> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_107> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_106> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_105> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_104> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_103> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_102> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_101> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_100> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_99> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_98> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_97> (without init value) has a constant value of 1 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_96> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <coef_0_95> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <FIRFilterBasic> ...
+WARNING:Xst:1710 - FF/Latch <cnt_5> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cnt_6> (without init value) has a constant value of 0 in block <FIRFilterBasic>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FIRFilterBasic, actual ratio is 51.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 325
+ Flip-Flops                                            : 325
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FIRFilterBasic.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 6293
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 311
+#      LUT2                        : 1455
+#      LUT3                        : 43
+#      LUT4                        : 67
+#      LUT5                        : 397
+#      LUT6                        : 122
+#      MUXCY                       : 1937
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 1956
+# FlipFlops/Latches                : 325
+#      FDE                         : 320
+#      FDRE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 17
+#      OBUF                        : 16
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             325  out of  11440     2%  
+ Number of Slice LUTs:                 2397  out of   5720    41%  
+    Number used as Logic:              2397  out of   5720    41%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2643
+   Number with an unused Flip Flop:    2318  out of   2643    87%  
+   Number with an unused LUT:           246  out of   2643     9%  
+   Number of fully used LUT-FF pairs:    79  out of   2643     2%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    102    33%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 326   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 24.213ns (Maximum Frequency: 41.300MHz)
+   Minimum input arrival time before clock: 4.565ns
+   Maximum output required time after clock: 3.597ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 24.213ns (frequency: 41.300MHz)
+  Total number of paths / destination ports: 1091647257860340000 / 362
+-------------------------------------------------------------------------
+Delay:               24.213ns (Levels of Logic = 70)
+  Source:            Mmult_coef[1][15]_shift[1][15]_MuLt_35_OUT (DSP)
+  Destination:       out_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: Mmult_coef[1][15]_shift[1][15]_MuLt_35_OUT to out_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->M1       1   3.344   0.580  Mmult_coef[1][15]_shift[1][15]_MuLt_35_OUT (coef[1][15]_shift[1][15]_MuLt_35_OUT<1>)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_lut<1> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<1> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<2> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<3> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<4> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<5> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<6> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<7> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<8> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<9> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<10> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<11> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<12> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<13> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<14> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<15> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<16> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<17> (Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_cy<17>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[0][15]_shift[0][15]_MuLt_34_OUT_Madd_xor<18> (ADDER_FOR_MULTADD_Madd_18)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT_Madd_lut<18> (Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT_Madd_lut<18>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT_Madd_cy<18> (Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT_Madd_cy<18>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[2][15]_shift[2][15]_MuLt_37_OUT_Madd_xor<19> (ADDER_FOR_MULTADD_Madd_191)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT_Madd_lut<19> (Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT_Madd_lut<19>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT_Madd_cy<19> (Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT_Madd_cy<19>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[3][15]_shift[3][15]_MuLt_39_OUT_Madd_xor<20> (ADDER_FOR_MULTADD_Madd_202)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT_Madd_lut<20> (Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT_Madd_lut<20>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT_Madd_cy<20> (Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT_Madd_cy<20>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[18][15]_shift[18][15]_MuLt_69_OUT_Madd_xor<21> (ADDER_FOR_MULTADD_Madd_215)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT_Madd_lut<21> (Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT_Madd_lut<21>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT_Madd_cy<21> (Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT_Madd_cy<21>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[4][15]_shift[4][15]_MuLt_41_OUT_Madd_xor<22> (ADDER_FOR_MULTADD_Madd_224)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT_Madd_lut<22> (Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT_Madd_lut<22>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT_Madd_cy<22> (Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT_Madd_cy<22>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[5][15]_shift[5][15]_MuLt_43_OUT_Madd_xor<23> (ADDER_FOR_MULTADD_Madd_235)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT_Madd_lut<23> (Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT_Madd_lut<23>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT_Madd_cy<23> (Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT_Madd_cy<23>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[6][15]_shift[6][15]_MuLt_45_OUT_Madd_xor<24> (ADDER_FOR_MULTADD_Madd_246)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT_Madd_lut<24> (Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT_Madd_lut<24>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT_Madd_cy<24> (Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT_Madd_cy<24>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[7][15]_shift[7][15]_MuLt_47_OUT_Madd_xor<25> (ADDER_FOR_MULTADD_Madd_257)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT_Madd_lut<25> (Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT_Madd_lut<25>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT_Madd_cy<25> (Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT_Madd_cy<25>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[8][15]_shift[8][15]_MuLt_49_OUT_Madd_xor<26> (ADDER_FOR_MULTADD_Madd_268)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT_Madd_lut<26> (Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT_Madd_lut<26>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT_Madd_cy<26> (Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT_Madd_cy<26>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[9][15]_shift[9][15]_MuLt_51_OUT_Madd_xor<27> (ADDER_FOR_MULTADD_Madd_279)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT_Madd_lut<27> (Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT_Madd_lut<27>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT_Madd_cy<27> (Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT_Madd_cy<27>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[10][15]_shift[10][15]_MuLt_53_OUT_Madd_xor<28> (ADDER_FOR_MULTADD_Madd_2810)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT_Madd_lut<28> (Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT_Madd_lut<28>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT_Madd_cy<28> (Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT_Madd_cy<28>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[11][15]_shift[11][15]_MuLt_55_OUT_Madd_xor<29> (ADDER_FOR_MULTADD_Madd_2911)
+     LUT2:I1->O            1   0.205   0.000  Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT_Madd_lut<29> (Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT_Madd_lut<29>)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT_Madd_cy<29> (Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT_Madd_cy<29>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[12][15]_shift[12][15]_MuLt_57_OUT_Madd_xor<30> (ADDER_FOR_MULTADD_Madd_3012)
+     LUT1:I0->O            1   0.205   0.000  Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT_Madd_cy<30>_rt (Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT_Madd_cy<30>_rt)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT_Madd_cy<30> (Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT_Madd_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[13][15]_shift[13][15]_MuLt_59_OUT_Madd_xor<31> (ADDER_FOR_MULTADD_Madd_3115)
+     LUT1:I0->O            1   0.205   0.000  Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT_Madd_cy<31>_rt (Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT_Madd_cy<31>_rt)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT_Madd_cy<31> (Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT_Madd_cy<31>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[14][15]_shift[14][15]_MuLt_61_OUT_Madd_xor<32> (ADDER_FOR_MULTADD_Madd_3215)
+     LUT1:I0->O            1   0.205   0.000  Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT_Madd_cy<32>_rt (Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT_Madd_cy<32>_rt)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT_Madd_cy<32> (Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT_Madd_cy<32>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[15][15]_shift[15][15]_MuLt_63_OUT_Madd_xor<33> (ADDER_FOR_MULTADD_Madd_3315)
+     LUT1:I0->O            1   0.205   0.000  Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT_Madd_cy<33>_rt (Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT_Madd_cy<33>_rt)
+     MUXCY:S->O            1   0.172   0.000  Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT_Madd_cy<33> (Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT_Madd_cy<33>)
+     XORCY:CI->O           1   0.180   0.580  Maddsub_coef[16][15]_shift[16][15]_MuLt_65_OUT_Madd_xor<34> (ADDER_FOR_MULTADD_Madd_3416)
+     LUT1:I0->O            1   0.205   0.000  Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT_Madd_cy<34>_rt (Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT_Madd_cy<34>_rt)
+     MUXCY:S->O            0   0.172   0.000  Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT_Madd_cy<34> (Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT_Madd_cy<34>)
+     XORCY:CI->O           1   0.180   0.000  Maddsub_coef[17][15]_shift[17][15]_MuLt_67_OUT_Madd_xor<35> (ADDER_FOR_MULTADD_Madd_3517)
+     FDE:D                     0.102          out_15
+    ----------------------------------------
+    Total                     24.213ns (13.776ns logic, 10.437ns route)
+                                       (56.9% logic, 43.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 630 / 630
+-------------------------------------------------------------------------
+Offset:              4.565ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       shift_0_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to shift_0_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             6   1.222   0.744  reset_IBUF (reset_IBUF)
+     INV:I->O            305   0.206   2.071  reset_inv1_INV_0 (reset_inv)
+     FDE:CE                    0.322          shift_0_0
+    ----------------------------------------
+    Total                      4.565ns (1.750ns logic, 2.815ns route)
+                                       (38.3% logic, 61.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            out_15 (FF)
+  Destination:       out<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: out_15 to out<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.447   0.579  out_15 (out_15)
+     OBUF:I->O                 2.571          out_15_OBUF (out<15>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   24.213|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 18.28 secs
+ 
+--> 
+
+Total memory usage is 294428 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  611 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
