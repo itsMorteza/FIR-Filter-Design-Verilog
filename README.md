@@ -1,4 +1,4 @@
-# FIR Filter Verilog Project
+# FIR Filter Design Verilog Project
 
 This project implements an FIR (Finite Impulse Response) filter in Verilog with three phases: fundamental design, optimization using resource sharing, and utilizing a preset Xilinx core.
 
@@ -17,8 +17,8 @@ This project implements an FIR (Finite Impulse Response) filter in Verilog with 
  
 ## How to Use
 
-1. Clone the repository: `git clone https://github.com/itsMorteza/Fpga_FIR_compiler.git`
-2. Navigate to the project directory: `cd Fpga_FIR_compiler/phaseX` (Replace X with the desired phase)
+1. Clone the repository: `git clone https://github.com/itsMorteza/FIR-Filter-Design-Verilog.git`
+2. Navigate to the project directory: `cd X` (Replace X with the desired phase)
 3. Build the project (provide build instructions if necessary).
 4. Simulate the FIR filter using the provided testbench files.
 
